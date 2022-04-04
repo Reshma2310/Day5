@@ -1,0 +1,8 @@
+#!/bin/bash -x
+
+read -p "Enter Width of Rectangle in feet: " a
+read -p "Enter Height of Rectangle in feet: " b
+area=$(( $a * $b ))
+echo $area;
+areaInMeters=`echo $area 3.28 | awk '{printf "%f", $1/$2}'`
+echo $areaInMeters
